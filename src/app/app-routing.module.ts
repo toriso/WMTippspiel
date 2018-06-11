@@ -9,21 +9,19 @@ import { BettingTablePageComponent } from './pages/betting-table-page/betting-ta
 import { ScorePageComponent } from './pages/score-page/score-page.component';
 import { SchedulePageComponent } from './pages/schedule-page/schedule-page.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'bet', component: BetPageComponent },
   { path: 'bettingTable', component: BettingTablePageComponent },
-  { path: 'rating', component: ScorePageComponent },
+  { path: 'score', component: ScorePageComponent },
   { path: 'schedule', component: SchedulePageComponent },
   { path: '404', component: PageNotFoundPageComponent },
   { path: '**', redirectTo: '404' }
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
